@@ -809,6 +809,7 @@ public abstract partial class SharedSolutionContainerSystem : EntitySystem
         UpdateChemicals(soln);
     }
 
+    // <Trauma>
     /// <summary>
     ///     Adds some temperature to a solution and then checks for reaction processing. (I am not sure why this didnt get added)
     /// </summary>
@@ -826,6 +827,7 @@ public abstract partial class SharedSolutionContainerSystem : EntitySystem
         solution.Temperature += temperature;
         UpdateChemicals(soln);
     }
+    // </Trauma>
 
     /// <summary>
     /// Same as <see cref="AddThermalEnergy"/> but clamps the value between two temperature values.
