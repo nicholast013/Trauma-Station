@@ -810,6 +810,24 @@ public abstract partial class SharedSolutionContainerSystem : EntitySystem
     }
 
     /// <summary>
+    ///     Adds some temperature to a solution and then checks for reaction processing. (I am not sure why this didnt get added)
+    /// </summary>
+    /// <param name="owner">The entity in which the solution is located.</param>
+    /// <param name="solution">The solution to set the thermal energy of.</param>
+    /// <param name="temperature">The new value to set the temperature to.</param>
+    public void AddTemperature(Entity<SolutionComponent> soln, float temperature)
+    {
+        var (_, comp) = soln;
+        var solution = comp.Solution;
+
+        if (temperature == solution.Temperature)
+            return;
+
+        solution.Temperature += temperature;
+        UpdateChemicals(soln);
+    }
+
+    /// <summary>
     /// Same as <see cref="AddThermalEnergy"/> but clamps the value between two temperature values.
     /// </summary>
     /// <param name="soln">Solution we're adjusting the energy of</param>
