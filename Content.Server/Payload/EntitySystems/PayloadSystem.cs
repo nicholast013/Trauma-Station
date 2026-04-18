@@ -185,7 +185,7 @@ public sealed class PayloadSystem : EntitySystem
         _solutionContainerSystem.AddTemperature(solnA.Value,10f); // Trauma - adds heat to container solutions
         PredictedQueueDel(entity);// Trauma - Will find another solution to the problem.
 
-        /* 
+        /*
         // The grenade might be a dud. Redistribute solution:
         var tmpSol = _solutionContainerSystem.SplitSolution(solnA.Value, solutionA.Volume * solutionB.MaxVolume / solutionA.MaxVolume);
         _solutionContainerSystem.TryAddSolution(solnB.Value, tmpSol);
