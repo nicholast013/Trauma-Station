@@ -6,25 +6,25 @@
   - AreaMaints # for ambience and maints spawn rules
   - AreaHallway # for carp migration
   maps:
-  #- Atlas
-  #- Amber
+  - Atlas
+  - Amber
   - Bagel
   - Box
-  #- Cluster
+  - Cluster
   - Fland
   #- Loop # needs full area coverage
   - Marathon
   - Meta
   - Oasis
-  #- Omega
+  - Omega
   - Origin
   - Saltern
-  #- Packed
+  - Packed
   #- Barratry
   - Kettle
   #- Submarine
   - Leonid
-  - Delta
+  #- Delta # decals are overlapping everywhere and have Z fighting
   #- Chloris
   - Cog
   - Reach
